@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>a little flower 🌸</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at top, #27345a, #090b18);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.container {
+  text-align: center;
+}
+
+.flower {
+  position: relative;
+  width: 180px;
+  height: 220px;
+  margin: auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* stem */
+.stem {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 8px;
+  height: 130px;
+  background: #4caf50;
+  transform: translateX(-50%);
+  border-radius: 10px;
+}
+
+/* petals */
+.petal {
+  position: absolute;
+  width: 90px;
+  height: 120px;
+  background: linear-gradient(#ff9ecf,#ff4f9a);
+  border-radius: 50%;
+  left: 45px;
+  top: 20px;
+  transform-origin: bottom center;
+  opacity: 0;
+  animation: bloom 2s forwards;
+}
+
+.petal:nth-child(1){
+  transform: rotate(0deg);
+  animation-delay:1s;
+}
+
+.petal:nth-child(2){
+  transform: rotate(60deg);
+  animation-delay:1.3s;
+}
+
+.petal:nth-child(3){
+  transform: rotate(120deg);
+  animation-delay:1.6s;
+}
+
+.petal:nth-child(4){
+  transform: rotate(180deg);
+  animation-delay:1.9s;
+}
+
+.petal:nth-child(5){
+  transform: rotate(240deg);
+  animation-delay:2.2s;
+}
+
+.petal:nth-child(6){
+  transform: rotate(300deg);
+  animation-delay:2.5s;
+}
+
+.center {
+  position:absolute;
+  width:45px;
+  height:45px;
+  background:#ffd54f;
+  border-radius:50%;
+  top:75px;
+  left:68px;
+  opacity:0;
+  animation:bloom 1s forwards;
+  animation-delay:3s;
+}
+
+.text {
+  margin-top:30px;
+  font-size:20px;
+  opacity:0;
+  animation:show 2s forwards;
+  animation-delay:4s;
+}
+
+.small {
+  margin-top:15px;
+  font-size:14px;
+  opacity:0;
+  animation:show 2s forwards;
+  animation-delay:5s;
+  color:#ddd;
+}
+
+
+@keyframes bloom{
+  from{
+    opacity:0;
+    transform:scale(0.2) rotate(var(--r));
+  }
+  to{
+    opacity:1;
+  }
+}
+
+@keyframes show{
+  to{
+    opacity:1;
+  }
+}
+
+@keyframes float{
+  50%{
+    transform:translateY(-10px);
+  }
+}
+</style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+<div class="flower">
+
+<div class="stem"></div>
+
+<div class="petal"></div>
+<div class="petal"></div>
+<div class="petal"></div>
+<div class="petal"></div>
+<div class="petal"></div>
+<div class="petal"></div>
+
+<div class="center"></div>
+
+</div>
+
+
+<div class="text">
+a little flower for you 🌸
+</div>
+
+<div class="small">
+because you always make conversations more fun :)
+</div>
+
+
+</div>
+
+</body>
+</html>
